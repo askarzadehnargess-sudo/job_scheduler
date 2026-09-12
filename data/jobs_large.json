@@ -1,0 +1,1740 @@
+{
+  "metadata": {
+    "scenario": "MTO Manufacturing Floor",
+    "shift_duration_hours": 8,
+    "num_jobs": 200,
+    "dataset_size": "large",
+    "random_seed": 42,
+    "dependency_rate": 0.3
+  },
+  "jobs": [
+    {
+      "job_id": "J001",
+      "name": "Cut Steel Plates",
+      "duration": 3,
+      "deadline": 7,
+      "profit": 3100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J002",
+      "name": "Cut Aluminum Sheets",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 4800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J003",
+      "name": "Weld Frame Assembly",
+      "duration": 1,
+      "deadline": 2,
+      "profit": 3000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J004",
+      "name": "Weld Support Brackets",
+      "duration": 1,
+      "deadline": 3,
+      "profit": 1700,
+      "dependencies": [
+        "J002"
+      ]
+    },
+    {
+      "job_id": "J005",
+      "name": "Drill Mounting Holes",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 1600,
+      "dependencies": [
+        "J002"
+      ]
+    },
+    {
+      "job_id": "J006",
+      "name": "Drill Precision Holes",
+      "duration": 1,
+      "deadline": 5,
+      "profit": 4000,
+      "dependencies": [
+        "J005"
+      ]
+    },
+    {
+      "job_id": "J007",
+      "name": "Grind Surface Finish",
+      "duration": 1,
+      "deadline": 2,
+      "profit": 2000,
+      "dependencies": [
+        "J004"
+      ]
+    },
+    {
+      "job_id": "J008",
+      "name": "Grind Edge Chamfers",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 3000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J009",
+      "name": "Paint Body Panel",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J010",
+      "name": "Paint Frame Structure",
+      "duration": 3,
+      "deadline": 7,
+      "profit": 2300,
+      "dependencies": []
+    },
+    {
+      "job_id": "J011",
+      "name": "Assemble Main Unit",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 1700,
+      "dependencies": [
+        "J001"
+      ]
+    },
+    {
+      "job_id": "J012",
+      "name": "Assemble Sub-Components",
+      "duration": 1,
+      "deadline": 7,
+      "profit": 2500,
+      "dependencies": [
+        "J010"
+      ]
+    },
+    {
+      "job_id": "J013",
+      "name": "Install Fasteners",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J014",
+      "name": "Install Hydraulic Lines",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 1600,
+      "dependencies": [
+        "J002"
+      ]
+    },
+    {
+      "job_id": "J015",
+      "name": "Quality Inspection",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 1200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J016",
+      "name": "Final Quality Test",
+      "duration": 2,
+      "deadline": 7,
+      "profit": 4300,
+      "dependencies": [
+        "J002"
+      ]
+    },
+    {
+      "job_id": "J017",
+      "name": "Package Assembly",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 2100,
+      "dependencies": [
+        "J011"
+      ]
+    },
+    {
+      "job_id": "J018",
+      "name": "Package Finished Unit",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 3000,
+      "dependencies": [
+        "J010"
+      ]
+    },
+    {
+      "job_id": "J019",
+      "name": "Surface Treatment",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 900,
+      "dependencies": [
+        "J004"
+      ]
+    },
+    {
+      "job_id": "J020",
+      "name": "Heat Treatment",
+      "duration": 1,
+      "deadline": 6,
+      "profit": 1800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J021",
+      "name": "CNC Milling Operation",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J022",
+      "name": "CNC Turning Operation",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 1500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J023",
+      "name": "Press Brake Forming",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 4600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J024",
+      "name": "Plasma Cutting",
+      "duration": 3,
+      "deadline": 4,
+      "profit": 1300,
+      "dependencies": [
+        "J004"
+      ]
+    },
+    {
+      "job_id": "J025",
+      "name": "TIG Welding",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 2300,
+      "dependencies": []
+    },
+    {
+      "job_id": "J026",
+      "name": "MIG Welding",
+      "duration": 3,
+      "deadline": 5,
+      "profit": 4800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J027",
+      "name": "Powder Coating",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 3600,
+      "dependencies": [
+        "J002"
+      ]
+    },
+    {
+      "job_id": "J028",
+      "name": "Anodizing Treatment",
+      "duration": 1,
+      "deadline": 7,
+      "profit": 3200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J029",
+      "name": "Thread Tapping",
+      "duration": 1,
+      "deadline": 2,
+      "profit": 2600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J030",
+      "name": "Deburring Operation",
+      "duration": 3,
+      "deadline": 5,
+      "profit": 3300,
+      "dependencies": []
+    },
+    {
+      "job_id": "J031",
+      "name": "Cut Steel Plates #2",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 1200,
+      "dependencies": [
+        "J029"
+      ]
+    },
+    {
+      "job_id": "J032",
+      "name": "Cut Aluminum Sheets #2",
+      "duration": 2,
+      "deadline": 7,
+      "profit": 700,
+      "dependencies": []
+    },
+    {
+      "job_id": "J033",
+      "name": "Weld Frame Assembly #2",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 1300,
+      "dependencies": [
+        "J024"
+      ]
+    },
+    {
+      "job_id": "J034",
+      "name": "Weld Support Brackets #2",
+      "duration": 1,
+      "deadline": 4,
+      "profit": 1800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J035",
+      "name": "Drill Mounting Holes #2",
+      "duration": 1,
+      "deadline": 4,
+      "profit": 4000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J036",
+      "name": "Drill Precision Holes #2",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 2000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J037",
+      "name": "Grind Surface Finish #2",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 600,
+      "dependencies": [
+        "J022"
+      ]
+    },
+    {
+      "job_id": "J038",
+      "name": "Grind Edge Chamfers #2",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 2200,
+      "dependencies": [
+        "J007"
+      ]
+    },
+    {
+      "job_id": "J039",
+      "name": "Paint Body Panel #2",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 3500,
+      "dependencies": [
+        "J030"
+      ]
+    },
+    {
+      "job_id": "J040",
+      "name": "Paint Frame Structure #2",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 1900,
+      "dependencies": [
+        "J013"
+      ]
+    },
+    {
+      "job_id": "J041",
+      "name": "Assemble Main Unit #2",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 2200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J042",
+      "name": "Assemble Sub-Components #2",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 4600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J043",
+      "name": "Install Fasteners #2",
+      "duration": 3,
+      "deadline": 4,
+      "profit": 1200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J044",
+      "name": "Install Hydraulic Lines #2",
+      "duration": 3,
+      "deadline": 5,
+      "profit": 4200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J045",
+      "name": "Quality Inspection #2",
+      "duration": 3,
+      "deadline": 4,
+      "profit": 1100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J046",
+      "name": "Final Quality Test #2",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 3200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J047",
+      "name": "Package Assembly #2",
+      "duration": 1,
+      "deadline": 5,
+      "profit": 4100,
+      "dependencies": [
+        "J003"
+      ]
+    },
+    {
+      "job_id": "J048",
+      "name": "Package Finished Unit #2",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 3800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J049",
+      "name": "Surface Treatment #2",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 3200,
+      "dependencies": [
+        "J043"
+      ]
+    },
+    {
+      "job_id": "J050",
+      "name": "Heat Treatment #2",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 2500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J051",
+      "name": "CNC Milling Operation #2",
+      "duration": 1,
+      "deadline": 7,
+      "profit": 2400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J052",
+      "name": "CNC Turning Operation #2",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 3000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J053",
+      "name": "Press Brake Forming #2",
+      "duration": 2,
+      "deadline": 4,
+      "profit": 3100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J054",
+      "name": "Plasma Cutting #2",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 4400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J055",
+      "name": "TIG Welding #2",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 2400,
+      "dependencies": [
+        "J028"
+      ]
+    },
+    {
+      "job_id": "J056",
+      "name": "MIG Welding #2",
+      "duration": 3,
+      "deadline": 7,
+      "profit": 3300,
+      "dependencies": []
+    },
+    {
+      "job_id": "J057",
+      "name": "Powder Coating #2",
+      "duration": 2,
+      "deadline": 7,
+      "profit": 3500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J058",
+      "name": "Anodizing Treatment #2",
+      "duration": 2,
+      "deadline": 8,
+      "profit": 1000,
+      "dependencies": [
+        "J043"
+      ]
+    },
+    {
+      "job_id": "J059",
+      "name": "Thread Tapping #2",
+      "duration": 3,
+      "deadline": 4,
+      "profit": 2000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J060",
+      "name": "Deburring Operation #2",
+      "duration": 2,
+      "deadline": 4,
+      "profit": 1400,
+      "dependencies": [
+        "J016"
+      ]
+    },
+    {
+      "job_id": "J061",
+      "name": "Cut Steel Plates #3",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 3400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J062",
+      "name": "Cut Aluminum Sheets #3",
+      "duration": 2,
+      "deadline": 8,
+      "profit": 4900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J063",
+      "name": "Weld Frame Assembly #3",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 1400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J064",
+      "name": "Weld Support Brackets #3",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 1100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J065",
+      "name": "Drill Mounting Holes #3",
+      "duration": 2,
+      "deadline": 4,
+      "profit": 4900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J066",
+      "name": "Drill Precision Holes #3",
+      "duration": 1,
+      "deadline": 6,
+      "profit": 2000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J067",
+      "name": "Grind Surface Finish #3",
+      "duration": 1,
+      "deadline": 5,
+      "profit": 1300,
+      "dependencies": []
+    },
+    {
+      "job_id": "J068",
+      "name": "Grind Edge Chamfers #3",
+      "duration": 3,
+      "deadline": 7,
+      "profit": 4400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J069",
+      "name": "Paint Body Panel #3",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 1500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J070",
+      "name": "Paint Frame Structure #3",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 2100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J071",
+      "name": "Assemble Main Unit #3",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 3600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J072",
+      "name": "Assemble Sub-Components #3",
+      "duration": 3,
+      "deadline": 7,
+      "profit": 900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J073",
+      "name": "Install Fasteners #3",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 2600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J074",
+      "name": "Install Hydraulic Lines #3",
+      "duration": 1,
+      "deadline": 3,
+      "profit": 1400,
+      "dependencies": [
+        "J020"
+      ]
+    },
+    {
+      "job_id": "J075",
+      "name": "Quality Inspection #3",
+      "duration": 2,
+      "deadline": 3,
+      "profit": 3100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J076",
+      "name": "Final Quality Test #3",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 800,
+      "dependencies": [
+        "J054"
+      ]
+    },
+    {
+      "job_id": "J077",
+      "name": "Package Assembly #3",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 4100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J078",
+      "name": "Package Finished Unit #3",
+      "duration": 1,
+      "deadline": 4,
+      "profit": 2400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J079",
+      "name": "Surface Treatment #3",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 3600,
+      "dependencies": [
+        "J056"
+      ]
+    },
+    {
+      "job_id": "J080",
+      "name": "Heat Treatment #3",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 2900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J081",
+      "name": "CNC Milling Operation #3",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 3400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J082",
+      "name": "CNC Turning Operation #3",
+      "duration": 1,
+      "deadline": 5,
+      "profit": 4200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J083",
+      "name": "Press Brake Forming #3",
+      "duration": 1,
+      "deadline": 2,
+      "profit": 4600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J084",
+      "name": "Plasma Cutting #3",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 800,
+      "dependencies": [
+        "J042"
+      ]
+    },
+    {
+      "job_id": "J085",
+      "name": "TIG Welding #3",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 2500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J086",
+      "name": "MIG Welding #3",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 3100,
+      "dependencies": [
+        "J011"
+      ]
+    },
+    {
+      "job_id": "J087",
+      "name": "Powder Coating #3",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 3900,
+      "dependencies": [
+        "J045"
+      ]
+    },
+    {
+      "job_id": "J088",
+      "name": "Anodizing Treatment #3",
+      "duration": 2,
+      "deadline": 8,
+      "profit": 900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J089",
+      "name": "Thread Tapping #3",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J090",
+      "name": "Deburring Operation #3",
+      "duration": 2,
+      "deadline": 3,
+      "profit": 4400,
+      "dependencies": [
+        "J017"
+      ]
+    },
+    {
+      "job_id": "J091",
+      "name": "Cut Steel Plates #4",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 4100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J092",
+      "name": "Cut Aluminum Sheets #4",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 2800,
+      "dependencies": [
+        "J078"
+      ]
+    },
+    {
+      "job_id": "J093",
+      "name": "Weld Frame Assembly #4",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 1500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J094",
+      "name": "Weld Support Brackets #4",
+      "duration": 1,
+      "deadline": 6,
+      "profit": 600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J095",
+      "name": "Drill Mounting Holes #4",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 5000,
+      "dependencies": [
+        "J076"
+      ]
+    },
+    {
+      "job_id": "J096",
+      "name": "Drill Precision Holes #4",
+      "duration": 2,
+      "deadline": 3,
+      "profit": 4900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J097",
+      "name": "Grind Surface Finish #4",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 4100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J098",
+      "name": "Grind Edge Chamfers #4",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 3200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J099",
+      "name": "Paint Body Panel #4",
+      "duration": 1,
+      "deadline": 6,
+      "profit": 4600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J100",
+      "name": "Paint Frame Structure #4",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 1100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J101",
+      "name": "Assemble Main Unit #4",
+      "duration": 3,
+      "deadline": 7,
+      "profit": 5000,
+      "dependencies": [
+        "J023"
+      ]
+    },
+    {
+      "job_id": "J102",
+      "name": "Assemble Sub-Components #4",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 3900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J103",
+      "name": "Install Fasteners #4",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 4200,
+      "dependencies": [
+        "J032"
+      ]
+    },
+    {
+      "job_id": "J104",
+      "name": "Install Hydraulic Lines #4",
+      "duration": 1,
+      "deadline": 4,
+      "profit": 3300,
+      "dependencies": [
+        "J060"
+      ]
+    },
+    {
+      "job_id": "J105",
+      "name": "Quality Inspection #4",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J106",
+      "name": "Final Quality Test #4",
+      "duration": 3,
+      "deadline": 5,
+      "profit": 3600,
+      "dependencies": [
+        "J103"
+      ]
+    },
+    {
+      "job_id": "J107",
+      "name": "Package Assembly #4",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 2200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J108",
+      "name": "Package Finished Unit #4",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J109",
+      "name": "Surface Treatment #4",
+      "duration": 2,
+      "deadline": 3,
+      "profit": 2000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J110",
+      "name": "Heat Treatment #4",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 4900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J111",
+      "name": "CNC Milling Operation #4",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 600,
+      "dependencies": [
+        "J029"
+      ]
+    },
+    {
+      "job_id": "J112",
+      "name": "CNC Turning Operation #4",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 2400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J113",
+      "name": "Press Brake Forming #4",
+      "duration": 3,
+      "deadline": 7,
+      "profit": 4000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J114",
+      "name": "Plasma Cutting #4",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 2700,
+      "dependencies": []
+    },
+    {
+      "job_id": "J115",
+      "name": "TIG Welding #4",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 2100,
+      "dependencies": [
+        "J093"
+      ]
+    },
+    {
+      "job_id": "J116",
+      "name": "MIG Welding #4",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 1200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J117",
+      "name": "Powder Coating #4",
+      "duration": 2,
+      "deadline": 4,
+      "profit": 1800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J118",
+      "name": "Anodizing Treatment #4",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 3800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J119",
+      "name": "Thread Tapping #4",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 1700,
+      "dependencies": [
+        "J047"
+      ]
+    },
+    {
+      "job_id": "J120",
+      "name": "Deburring Operation #4",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J121",
+      "name": "Cut Steel Plates #5",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 700,
+      "dependencies": []
+    },
+    {
+      "job_id": "J122",
+      "name": "Cut Aluminum Sheets #5",
+      "duration": 3,
+      "deadline": 5,
+      "profit": 4500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J123",
+      "name": "Weld Frame Assembly #5",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J124",
+      "name": "Weld Support Brackets #5",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 3300,
+      "dependencies": []
+    },
+    {
+      "job_id": "J125",
+      "name": "Drill Mounting Holes #5",
+      "duration": 1,
+      "deadline": 4,
+      "profit": 3500,
+      "dependencies": [
+        "J009"
+      ]
+    },
+    {
+      "job_id": "J126",
+      "name": "Drill Precision Holes #5",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J127",
+      "name": "Grind Surface Finish #5",
+      "duration": 1,
+      "deadline": 3,
+      "profit": 1400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J128",
+      "name": "Grind Edge Chamfers #5",
+      "duration": 3,
+      "deadline": 4,
+      "profit": 2000,
+      "dependencies": [
+        "J098"
+      ]
+    },
+    {
+      "job_id": "J129",
+      "name": "Paint Body Panel #5",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 3800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J130",
+      "name": "Paint Frame Structure #5",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 4200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J131",
+      "name": "Assemble Main Unit #5",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 4400,
+      "dependencies": [
+        "J026"
+      ]
+    },
+    {
+      "job_id": "J132",
+      "name": "Assemble Sub-Components #5",
+      "duration": 2,
+      "deadline": 8,
+      "profit": 1800,
+      "dependencies": [
+        "J021"
+      ]
+    },
+    {
+      "job_id": "J133",
+      "name": "Install Fasteners #5",
+      "duration": 2,
+      "deadline": 4,
+      "profit": 1600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J134",
+      "name": "Install Hydraulic Lines #5",
+      "duration": 2,
+      "deadline": 3,
+      "profit": 3100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J135",
+      "name": "Quality Inspection #5",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 700,
+      "dependencies": [
+        "J073"
+      ]
+    },
+    {
+      "job_id": "J136",
+      "name": "Final Quality Test #5",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 4800,
+      "dependencies": [
+        "J068"
+      ]
+    },
+    {
+      "job_id": "J137",
+      "name": "Package Assembly #5",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 1200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J138",
+      "name": "Package Finished Unit #5",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 1400,
+      "dependencies": [
+        "J043"
+      ]
+    },
+    {
+      "job_id": "J139",
+      "name": "Surface Treatment #5",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 4100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J140",
+      "name": "Heat Treatment #5",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 3400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J141",
+      "name": "CNC Milling Operation #5",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 3700,
+      "dependencies": []
+    },
+    {
+      "job_id": "J142",
+      "name": "CNC Turning Operation #5",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 4300,
+      "dependencies": [
+        "J111"
+      ]
+    },
+    {
+      "job_id": "J143",
+      "name": "Press Brake Forming #5",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 2100,
+      "dependencies": [
+        "J059"
+      ]
+    },
+    {
+      "job_id": "J144",
+      "name": "Plasma Cutting #5",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 4800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J145",
+      "name": "TIG Welding #5",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 1600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J146",
+      "name": "MIG Welding #5",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 1600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J147",
+      "name": "Powder Coating #5",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 1000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J148",
+      "name": "Anodizing Treatment #5",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 2500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J149",
+      "name": "Thread Tapping #5",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 3100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J150",
+      "name": "Deburring Operation #5",
+      "duration": 3,
+      "deadline": 7,
+      "profit": 4000,
+      "dependencies": [
+        "J023"
+      ]
+    },
+    {
+      "job_id": "J151",
+      "name": "Cut Steel Plates #6",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 2500,
+      "dependencies": [
+        "J104"
+      ]
+    },
+    {
+      "job_id": "J152",
+      "name": "Cut Aluminum Sheets #6",
+      "duration": 1,
+      "deadline": 7,
+      "profit": 3900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J153",
+      "name": "Weld Frame Assembly #6",
+      "duration": 1,
+      "deadline": 3,
+      "profit": 3800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J154",
+      "name": "Weld Support Brackets #6",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 800,
+      "dependencies": [
+        "J141"
+      ]
+    },
+    {
+      "job_id": "J155",
+      "name": "Drill Mounting Holes #6",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 3300,
+      "dependencies": []
+    },
+    {
+      "job_id": "J156",
+      "name": "Drill Precision Holes #6",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J157",
+      "name": "Grind Surface Finish #6",
+      "duration": 2,
+      "deadline": 8,
+      "profit": 1500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J158",
+      "name": "Grind Edge Chamfers #6",
+      "duration": 1,
+      "deadline": 6,
+      "profit": 3100,
+      "dependencies": [
+        "J030"
+      ]
+    },
+    {
+      "job_id": "J159",
+      "name": "Paint Body Panel #6",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 4600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J160",
+      "name": "Paint Frame Structure #6",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 3700,
+      "dependencies": []
+    },
+    {
+      "job_id": "J161",
+      "name": "Assemble Main Unit #6",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 3500,
+      "dependencies": [
+        "J142"
+      ]
+    },
+    {
+      "job_id": "J162",
+      "name": "Assemble Sub-Components #6",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 1700,
+      "dependencies": []
+    },
+    {
+      "job_id": "J163",
+      "name": "Install Fasteners #6",
+      "duration": 2,
+      "deadline": 3,
+      "profit": 2200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J164",
+      "name": "Install Hydraulic Lines #6",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 3700,
+      "dependencies": [
+        "J001"
+      ]
+    },
+    {
+      "job_id": "J165",
+      "name": "Quality Inspection #6",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 4200,
+      "dependencies": []
+    },
+    {
+      "job_id": "J166",
+      "name": "Final Quality Test #6",
+      "duration": 4,
+      "deadline": 6,
+      "profit": 3300,
+      "dependencies": []
+    },
+    {
+      "job_id": "J167",
+      "name": "Package Assembly #6",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 4000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J168",
+      "name": "Package Finished Unit #6",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 2500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J169",
+      "name": "Surface Treatment #6",
+      "duration": 2,
+      "deadline": 7,
+      "profit": 2900,
+      "dependencies": [
+        "J106"
+      ]
+    },
+    {
+      "job_id": "J170",
+      "name": "Heat Treatment #6",
+      "duration": 1,
+      "deadline": 4,
+      "profit": 3500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J171",
+      "name": "CNC Milling Operation #6",
+      "duration": 4,
+      "deadline": 8,
+      "profit": 4700,
+      "dependencies": []
+    },
+    {
+      "job_id": "J172",
+      "name": "CNC Turning Operation #6",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 700,
+      "dependencies": [
+        "J152"
+      ]
+    },
+    {
+      "job_id": "J173",
+      "name": "Press Brake Forming #6",
+      "duration": 3,
+      "deadline": 4,
+      "profit": 3300,
+      "dependencies": [
+        "J117"
+      ]
+    },
+    {
+      "job_id": "J174",
+      "name": "Plasma Cutting #6",
+      "duration": 1,
+      "deadline": 7,
+      "profit": 1400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J175",
+      "name": "TIG Welding #6",
+      "duration": 2,
+      "deadline": 3,
+      "profit": 3500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J176",
+      "name": "MIG Welding #6",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 4400,
+      "dependencies": []
+    },
+    {
+      "job_id": "J177",
+      "name": "Powder Coating #6",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 2600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J178",
+      "name": "Anodizing Treatment #6",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 4500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J179",
+      "name": "Thread Tapping #6",
+      "duration": 4,
+      "deadline": 5,
+      "profit": 4400,
+      "dependencies": [
+        "J162"
+      ]
+    },
+    {
+      "job_id": "J180",
+      "name": "Deburring Operation #6",
+      "duration": 3,
+      "deadline": 5,
+      "profit": 1000,
+      "dependencies": []
+    },
+    {
+      "job_id": "J181",
+      "name": "Cut Steel Plates #7",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 4500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J182",
+      "name": "Cut Aluminum Sheets #7",
+      "duration": 1,
+      "deadline": 5,
+      "profit": 1500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J183",
+      "name": "Weld Frame Assembly #7",
+      "duration": 1,
+      "deadline": 2,
+      "profit": 2500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J184",
+      "name": "Weld Support Brackets #7",
+      "duration": 3,
+      "deadline": 6,
+      "profit": 2800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J185",
+      "name": "Drill Mounting Holes #7",
+      "duration": 2,
+      "deadline": 7,
+      "profit": 3100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J186",
+      "name": "Drill Precision Holes #7",
+      "duration": 2,
+      "deadline": 4,
+      "profit": 1600,
+      "dependencies": [
+        "J098"
+      ]
+    },
+    {
+      "job_id": "J187",
+      "name": "Grind Surface Finish #7",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 4200,
+      "dependencies": [
+        "J119"
+      ]
+    },
+    {
+      "job_id": "J188",
+      "name": "Grind Edge Chamfers #7",
+      "duration": 3,
+      "deadline": 7,
+      "profit": 2100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J189",
+      "name": "Paint Body Panel #7",
+      "duration": 4,
+      "deadline": 7,
+      "profit": 4800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J190",
+      "name": "Paint Frame Structure #7",
+      "duration": 1,
+      "deadline": 5,
+      "profit": 2700,
+      "dependencies": []
+    },
+    {
+      "job_id": "J191",
+      "name": "Assemble Main Unit #7",
+      "duration": 3,
+      "deadline": 7,
+      "profit": 4900,
+      "dependencies": [
+        "J078"
+      ]
+    },
+    {
+      "job_id": "J192",
+      "name": "Assemble Sub-Components #7",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 3500,
+      "dependencies": [
+        "J098"
+      ]
+    },
+    {
+      "job_id": "J193",
+      "name": "Install Fasteners #7",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 2300,
+      "dependencies": []
+    },
+    {
+      "job_id": "J194",
+      "name": "Install Hydraulic Lines #7",
+      "duration": 3,
+      "deadline": 4,
+      "profit": 4700,
+      "dependencies": []
+    },
+    {
+      "job_id": "J195",
+      "name": "Quality Inspection #7",
+      "duration": 1,
+      "deadline": 6,
+      "profit": 4800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J196",
+      "name": "Final Quality Test #7",
+      "duration": 1,
+      "deadline": 6,
+      "profit": 3600,
+      "dependencies": []
+    },
+    {
+      "job_id": "J197",
+      "name": "Package Assembly #7",
+      "duration": 3,
+      "deadline": 5,
+      "profit": 4300,
+      "dependencies": []
+    },
+    {
+      "job_id": "J198",
+      "name": "Package Finished Unit #7",
+      "duration": 2,
+      "deadline": 8,
+      "profit": 1700,
+      "dependencies": []
+    },
+    {
+      "job_id": "J199",
+      "name": "Surface Treatment #7",
+      "duration": 2,
+      "deadline": 8,
+      "profit": 1100,
+      "dependencies": []
+    },
+    {
+      "job_id": "J200",
+      "name": "Heat Treatment #7",
+      "duration": 1,
+      "deadline": 4,
+      "profit": 3300,
+      "dependencies": [
+        "J094"
+      ]
+    }
+  ]
+}

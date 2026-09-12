@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "scenario": "MTO Manufacturing Floor",
+    "shift_duration_hours": 8,
+    "num_jobs": 10,
+    "dataset_size": "small"
+  },
+  "jobs": [
+    {
+      "job_id": "J001",
+      "name": "Cut Steel Plates",
+      "duration": 2,
+      "deadline": 5,
+      "profit": 1500,
+      "dependencies": []
+    },
+    {
+      "job_id": "J002",
+      "name": "Weld Frame",
+      "duration": 3,
+      "deadline": 8,
+      "profit": 3000,
+      "dependencies": ["J001"]
+    },
+    {
+      "job_id": "J003",
+      "name": "Paint Body",
+      "duration": 1,
+      "deadline": 4,
+      "profit": 800,
+      "dependencies": []
+    },
+    {
+      "job_id": "J004",
+      "name": "Assemble Parts",
+      "duration": 2,
+      "deadline": 7,
+      "profit": 2000,
+      "dependencies": ["J001"]
+    },
+    {
+      "job_id": "J005",
+      "name": "Quality Test",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 1200,
+      "dependencies": ["J004"]
+    },
+    {
+      "job_id": "J006",
+      "name": "Package Order",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 500,
+      "dependencies": ["J005"]
+    },
+    {
+      "job_id": "J007",
+      "name": "Cut Aluminum Sheets",
+      "duration": 1,
+      "deadline": 3,
+      "profit": 900,
+      "dependencies": []
+    },
+    {
+      "job_id": "J008",
+      "name": "Drill Holes",
+      "duration": 2,
+      "deadline": 6,
+      "profit": 1100,
+      "dependencies": ["J007"]
+    },
+    {
+      "job_id": "J009",
+      "name": "Surface Treatment",
+      "duration": 2,
+      "deadline": 7,
+      "profit": 1800,
+      "dependencies": ["J008"]
+    },
+    {
+      "job_id": "J010",
+      "name": "Final Inspection",
+      "duration": 1,
+      "deadline": 8,
+      "profit": 700,
+      "dependencies": ["J009"]
+    }
+  ]
+}
